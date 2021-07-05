@@ -146,7 +146,12 @@ abstract class Base implements IteratorAggregate
 
         return $this;
     }
-    protected function addUnionStatement($unionStatement)
+
+    /**
+     * @param string $unionStatement
+     * @return $this
+     */
+    protected function addUnionStatement(string $unionStatement): Base
     {
         $this->addStatement('UNION', $unionStatement);
         return $this;
