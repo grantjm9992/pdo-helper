@@ -15,7 +15,7 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"grantjm9992\\PDOHelper\\": "src/"
+			"Grantjm9992\\PDOHelper\\": "src/"
 		}
 	},
   "require": {
