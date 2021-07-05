@@ -91,6 +91,26 @@ class Query
     }
 
     /**
+     * Create SELECT query from unified tables
+     *
+     * @param array $tables
+     * @param string $groupedTableAlias
+     * @return Select
+     */
+    public function unifiedTables(array $tables, string $groupedTableAlias): Select
+    {
+        $tableString =  '(';
+        foreach ($tables as $table) {
+            $tableString .= ' SELECT * FROM ' . $table . ' UNION';
+        }
+        $tableString = substr($tableString, 0, strlen($tableString) - 5);
+        $tableString .= ') as ' . $groupedTableAlias;
+        $query = new Select($this, $tableString);
+
+        return $query;
+    }
+
+    /**
      * Create INSERT INTO query
      *
      * @param ?string $table

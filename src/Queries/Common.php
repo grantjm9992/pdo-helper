@@ -229,6 +229,15 @@ abstract class Common extends Base
         return $query;
     }
 
+    protected function getClauseUnion() {
+        $query = '';
+        foreach ($this->statements['UNION'] as $statement) {
+            $query .= " UNION " . $statement;
+        }
+
+        return $query;
+    }
+
     /**
      * Statement can contain more tables (e.g. "table1.table2:table3:")
      *
@@ -532,6 +541,4 @@ abstract class Common extends Base
         $unionStatement = $this->createUnionStatement($unionTable, $selectedColumns);
         return $this->addUnionStatement($unionStatement);
     }
-
-
 }

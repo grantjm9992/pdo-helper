@@ -27,13 +27,13 @@ class Select extends Common implements \Countable
             'SELECT'   => ', ',
             'FROM'     => null,
             'JOIN'     => [$this, 'getClauseJoin'],
+            'UNION'    => [$this, 'getClauseUnion'],
             'WHERE'    => [$this, 'getClauseWhere'],
             'GROUP BY' => ',',
             'HAVING'   => ' AND ',
             'ORDER BY' => ', ',
             'LIMIT'    => null,
             'OFFSET'   => null,
-            'UNION'    => null,
             "\n--"     => "\n--"
         ];
         parent::__construct($fluent, $clauses);
