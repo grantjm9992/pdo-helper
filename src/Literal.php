@@ -1,6 +1,6 @@
 <?php
 
-namespace Envms\FluentPDO;
+namespace Grantjm9992\PDOHelper;
 
 /**
  * SQL literal value

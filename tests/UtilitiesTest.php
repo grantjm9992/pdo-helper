@@ -3,7 +3,7 @@
 require __DIR__ . '/_resources/init.php';
 
 use PHPUnit\Framework\TestCase;
-use Envms\FluentPDO\{Query,Utilities};
+use Grantjm9992\PDOHelper\{Query,Utilities};
 
 /**
  * Class UtilitiesTest
@@ -11,7 +11,7 @@ use Envms\FluentPDO\{Query,Utilities};
 class UtilitiesTest extends TestCase
 {
 
-    /** @var Envms\FluentPDO\Query */
+    /** @var Grantjm9992\PDOHelper\Query */
     protected $fluent;
 
     public function setUp(): void

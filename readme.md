@@ -64,7 +64,7 @@ Create a new PDO instance, and pass the instance to FluentPDO:
 
 ```php
 $pdo = new PDO("mysql:dbname=fluentdb", "root");
-$fluent = new \Envms\FluentPDO\Query($pdo);
+$fluent = new \Grantjm9992\PDOHelper\Query($pdo);
 ```
 
 Then, creating queries is quick and easy:

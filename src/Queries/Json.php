@@ -1,12 +1,12 @@
 <?php
-namespace Envms\FluentPDO\Queries;
+namespace Grantjm9992\PDOHelper\Queries;
 
-use Envms\FluentPDO\{Query, Utilities};
+use Grantjm9992\PDOHelper\{Query, Utilities};
 
 /**
  * Class Json
  *
- * @package Envms\FluentPDO\Queries
+ * @package Grantjm9992\PDOHelper\Queries
  */
 class Json extends Common
 {
