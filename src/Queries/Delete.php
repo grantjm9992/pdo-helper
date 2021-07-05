@@ -1,8 +1,8 @@
 <?php
 
-namespace Grantjm9992\PDOHelper\Queries;
+namespace Envms\FluentPDO\Queries;
 
-use Grantjm9992\PDOHelper\{Exception, Query};
+use Envms\FluentPDO\{Exception, Query};
 
 /**
  * DELETE query builder

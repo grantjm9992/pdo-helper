@@ -3,12 +3,12 @@
 require __DIR__ . '/_resources/init.php';
 
 use PHPUnit\Framework\TestCase;
-use Grantjm9992\PDOHelper\Structure;
+use Envms\FluentPDO\Structure;
 
 /**
  * Class StructureTest
  *
- * @covers \Grantjm9992\PDOHelper\Structure
+ * @covers \Envms\FluentPDO\Structure
  */
 class StructureTest extends TestCase
 {

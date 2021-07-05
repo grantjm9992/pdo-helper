@@ -4,12 +4,12 @@ require __DIR__ . '/../_resources/init.php';
 
 use PHPUnit\Framework\TestCase;
 use Envms\FluentTest\Model\User;
-use Grantjm9992\PDOHelper\Query;
+use Envms\FluentPDO\Query;
 
 /**
  * Class CommonTest
  *
- * @covers \Grantjm9992\PDOHelper\Queries\Common
+ * @covers \Envms\FluentPDO\Queries\Common
  */
 class CommonTest extends TestCase
 {

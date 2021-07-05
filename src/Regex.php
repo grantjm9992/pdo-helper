@@ -1,6 +1,6 @@
 <?php
 
-namespace Grantjm9992\PDOHelper;
+namespace Envms\FluentPDO;
 
 /**
  * Regex class

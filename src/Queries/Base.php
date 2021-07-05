@@ -1,9 +1,9 @@
 <?php
 
-namespace Grantjm9992\PDOHelper\Queries;
+namespace Envms\FluentPDO\Queries;
 
 use DateTime, IteratorAggregate, PDO, PDOStatement;
-use Grantjm9992\PDOHelper\{Exception, Literal, Query, Regex, Structure, Utilities};
+use Envms\FluentPDO\{Exception, Literal, Query, Regex, Structure, Utilities};
 
 /**
  * Base query builder

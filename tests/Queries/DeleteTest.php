@@ -3,12 +3,12 @@
 require __DIR__ . '/../_resources/init.php';
 
 use PHPUnit\Framework\TestCase;
-use Grantjm9992\PDOHelper\Query;
+use Envms\FluentPDO\Query;
 
 /**
  * Class DeleteTest
  *
- * @covers \Grantjm9992\PDOHelper\Queries\Delete
+ * @covers \Envms\FluentPDO\Queries\Delete
  */
 class DeleteTest extends TestCase
 {

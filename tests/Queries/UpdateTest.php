@@ -3,12 +3,12 @@
 require __DIR__ . '/../_resources/init.php';
 
 use PHPUnit\Framework\TestCase;
-use Grantjm9992\PDOHelper\Query;
+use Envms\FluentPDO\Query;
 
 /**
  * Class UpdateTest
  *
- * @covers \Grantjm9992\PDOHelper\Queries\Update
+ * @covers \Envms\FluentPDO\Queries\Update
  */
 class UpdateTest extends TestCase
 {
@@ -44,7 +44,7 @@ class UpdateTest extends TestCase
 
     public function testUpdateLiteral()
     {
-        $query = $this->fluent->update('article')->set('published_at', new Grantjm9992\PDOHelper\Literal('NOW()'))->where('user_id', 1);
+        $query = $this->fluent->update('article')->set('published_at', new Envms\FluentPDO\Literal('NOW()'))->where('user_id', 1);
 
         self::assertEquals('UPDATE article SET published_at = NOW() WHERE user_id = ?', $query->getQuery(false));
         self::assertEquals(['0' => '1'], $query->getParameters());

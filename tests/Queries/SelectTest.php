@@ -3,12 +3,12 @@
 require __DIR__ . '/../_resources/init.php';
 
 use PHPUnit\Framework\TestCase;
-use Grantjm9992\PDOHelper\Query;
+use Envms\FluentPDO\Query;
 
 /**
  * Class SelectTest
  *
- * @covers \Grantjm9992\PDOHelper\Queries\Select
+ * @covers \Envms\FluentPDO\Queries\Select
  */
 class SelectTest extends TestCase
 {

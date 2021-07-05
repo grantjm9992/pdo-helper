@@ -1,8 +1,8 @@
 <?php
 
-namespace Grantjm9992\PDOHelper\Queries;
+namespace Envms\FluentPDO\Queries;
 
-use Grantjm9992\PDOHelper\{Exception, Literal, Query};
+use Envms\FluentPDO\{Exception, Literal, Query};
 
 /** INSERT query builder
  */

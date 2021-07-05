@@ -3,17 +3,17 @@
 require __DIR__ . '/../_resources/init.php';
 
 use PHPUnit\Framework\TestCase;
-use Grantjm9992\PDOHelper\Query;
+use Envms\FluentPDO\Query;
 
 /**
  * Class InsertTest
  *
- * @covers \Grantjm9992\PDOHelper\Queries\Insert
+ * @covers \Envms\FluentPDO\Queries\Insert
  */
 class InsertTest extends TestCase
 {
 
-    /** @var Grantjm9992\PDOHelper\Query */
+    /** @var Envms\FluentPDO\Query */
     protected $fluent;
 
     public function setUp(): void
@@ -43,7 +43,7 @@ class InsertTest extends TestCase
             ->onDuplicateKeyUpdate([
                 'published_at' => '2011-12-10 12:10:00',
                 'title'   => 'article 1b',
-                'content' => new Grantjm9992\PDOHelper\Literal('abs(-1)') // let's update with a literal and a parameter value
+                'content' => new Envms\FluentPDO\Literal('abs(-1)') // let's update with a literal and a parameter value
             ]);
 
         $q = $this->fluent->from('article', 1);
@@ -72,7 +72,7 @@ class InsertTest extends TestCase
         $query = $this->fluent->insertInto('article',
             [
                 'user_id'    => 1,
-                'updated_at' => new Grantjm9992\PDOHelper\Literal('NOW()'),
+                'updated_at' => new Envms\FluentPDO\Literal('NOW()'),
                 'title'      => 'new title',
                 'content'    => 'new content',
             ]);

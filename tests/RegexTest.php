@@ -3,12 +3,12 @@
 require __DIR__ . '/_resources/init.php';
 
 use PHPUnit\Framework\TestCase;
-use Grantjm9992\PDOHelper\Regex;
+use Envms\FluentPDO\Regex;
 
 /**
  * Class StructureTest
  *
- * @covers \Grantjm9992\PDOHelper\Structure
+ * @covers \Envms\FluentPDO\Structure
  */
 class RegexTest extends TestCase
 {
