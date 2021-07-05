@@ -146,6 +146,11 @@ abstract class Base implements IteratorAggregate
 
         return $this;
     }
+    protected function addUnionStatement($unionStatement)
+    {
+        $this->addStatement('UNION', $unionStatement);
+        return $this;
+    }
 
     /**
      * Remove all prev defined statements
@@ -357,7 +362,6 @@ abstract class Base implements IteratorAggregate
         }
 
         $query = '';
-
         foreach ($this->clauses as $clause => $separator) {
             if ($this->clauseNotEmpty($clause)) {
                 if (is_string($separator)) {

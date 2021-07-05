@@ -33,6 +33,7 @@ class Select extends Common implements \Countable
             'ORDER BY' => ', ',
             'LIMIT'    => null,
             'OFFSET'   => null,
+            'UNION'    => null,
             "\n--"     => "\n--"
         ];
         parent::__construct($fluent, $clauses);

@@ -1,10 +1,13 @@
 {
-	"name": "envms/fluentpdo",
+	"name": "grantjm9992/PDOHelper",
 	"description": "FluentPDO is a quick and light PHP library for rapid query building. It features a smart join builder, which automatically creates table joins.",
 	"keywords": ["db", "database", "dbal", "pdo", "fluent", "query", "builder", "mysql", "oracle"],
 	"homepage": "https://github.com/envms/fluentpdo",
 	"license": ["Apache-2.0", "GPL-2.0+"],
 	"authors": [
+		{
+			"name": "Grant MacDonald"
+		},
 		{
 			"name": "envms",
 			"homepage": "https://env.ms"
@@ -12,7 +15,7 @@
 	],
 	"autoload": {
 		"psr-4": {
-			"Envms\\FluentPDO\\": "src/"
+			"grantjm9992\\PDOHelper\\": "src/"
 		}
 	},
   "require": {
