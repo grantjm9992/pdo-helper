@@ -514,7 +514,7 @@ abstract class Common extends Base
      * @param ?string $selectColumns
      * @return string
      */
-    public function createUnionStatement(string $clause = 'UNION', string $unionTable, ?string $selectColumns = ' * '): string
+    public function createUnionStatement(string $unionTable, string $selectColumns = ' * '): string
     {
         if (is_array($selectColumns)) {
             $selectColumns = implode(' ,', $selectColumns);
@@ -527,9 +527,9 @@ abstract class Common extends Base
      * @param ?string $selectedColumns
      * @return $this
      */
-    public function union(string $unionTable, ?string $selectedColumns = ' * '): Common
+    public function union(string $unionTable, string $selectedColumns = ' * '): Common
     {
-        $unionStatement = $this->createUnionStatement('UNION', $unionTable, $selectedColumns);
+        $unionStatement = $this->createUnionStatement($unionTable, $selectedColumns);
         return $this->addUnionStatement($unionStatement);
     }
 
