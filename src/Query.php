@@ -139,14 +139,14 @@ class Query
      *
      * @throws Exception
      */
-    public function update(?string $table = null, $set = [], ?int $primaryKey = null): Update
+    public function update(?string $table = null, $set = [], ?int $primaryKey = null, $ignoreNullValues = false): Update
     {
         $this->setTableName($table);
         $table = $this->getFullTableName();
 
         $query = new Update($this, $table);
 
-        $query->set($set);
+        $query->set($set, false, $ignoreNullValues);
         if ($primaryKey) {
             $primaryKeyName = $this->getStructure()->getPrimaryKey($this->table);
             $query = $query->where($primaryKeyName, $primaryKey);
